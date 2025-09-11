@@ -91,20 +91,6 @@ ol {
   font-size: 18px;
 }
 
-.search-form__label {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  width: fit-content;
-}
-
-.search-form__label:hover .search-form__label-text {
-  text-decoration: underline;
-  text-decoration-skip-ink: none;
-  text-underline-offset: 1px;
-  cursor: pointer;
-}
-
 .visually-hidden {
   position: absolute;
   overflow: hidden;
@@ -113,6 +99,27 @@ ol {
   block-size: 1px;
   clip-path: inset(50%);
   white-space: nowrap;
+}
+
+.search-form__label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  width: fit-content;
+  cursor: pointer;
+}
+
+.search-form__label:focus .search-form__label-text {
+  text-decoration: none;
+}
+.search-form__label:active {
+  text-decoration: none;
+}
+
+.search-form__label:has(:not(:active):hover) .search-form__label-text {
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+  text-underline-offset: 1px;
 }
 
 .search-form__textfield {
@@ -163,7 +170,6 @@ ol {
   height: 100%;
   opacity: 0;
   background-color: #fff;
-
 }
 
 .search-form__checkbox:checked+.search-form__pseudo-checkbox::after {
@@ -259,33 +265,10 @@ button:active {
   padding: 3px;
 }
 
-.content__list-item:focus {
-  outline: none;
-}
-
-.content__list-item:focus-visible {
-  outline: 1px solid #fff;
-}
-
-.content__list-item:hover {
-  text-decoration: underline;
-  text-decoration-skip-ink: none;
-  text-underline-offset: 1px;
-}
-
-.content__list-item:active {
-  background: #545050;
-}
-
 .content__card-link {
   display: block;
   color: #fff;
   text-decoration: none;
-}
-
-.content__card-link:hover {
-  text-decoration: underline;
-  text-underline-offset: 2px;
 }
 
 .content__video-card {
@@ -294,6 +277,26 @@ button:active {
   justify-content: space-between;
   align-items: flex-start;
   cursor: pointer;
+}
+
+.content__video-card:focus {
+  outline: none;
+}
+
+.content__video-card:focus-visible {
+  outline: 1px solid #fff;
+}
+
+.content__video-card:hover {
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+  text-underline-offset: 1px;
+}
+
+.content__video-card:active {
+  outline: none;
+  text-decoration: none;
+  background: #545050;
 }
 
 .content__video-card-description-container {
