@@ -173,8 +173,6 @@ ol {
 }
 
 .search-form__checkbox:checked+.search-form__pseudo-checkbox::after {
-  content: "";
-  display: block;
   opacity: 1;
 }
 
