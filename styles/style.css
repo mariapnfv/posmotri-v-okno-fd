@@ -176,7 +176,6 @@ ol {
   content: "";
   display: block;
   opacity: 1;
-  background-color: #fff;
 }
 
 .search-form__checkbox-list {
@@ -185,7 +184,7 @@ ol {
 }
 
 .button {
-  height: 34px;
+  min-height: 34px;
   border: 1px solid #fff;
   color: #fff;
   font-family: 'Fira Sans Condensed', sans-serif;
@@ -207,7 +206,7 @@ ol {
   margin-bottom: 2px; 
 }
 
-button:active {
+.button:active {
   background: #545050;
 }
 
@@ -252,7 +251,6 @@ button:active {
   gap: 30px;
   width: 399px;
   height: 298px;
-  overflow-x: hidden;
   overflow-y: auto;
 }
 
